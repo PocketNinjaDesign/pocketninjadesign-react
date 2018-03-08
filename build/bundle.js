@@ -28804,6 +28804,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(38);
 
+var _Logo = __webpack_require__(309);
+
+var _Logo2 = _interopRequireDefault(_Logo);
+
 var _Home = __webpack_require__(269);
 
 var _Home2 = _interopRequireDefault(_Home);
@@ -28834,9 +28838,21 @@ var App = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'container' },
-        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
-        _react2.default.createElement(_reactRouterDom.Route, { path: '/portfolio/:type', component: _Portfolio2.default })
+        { className: 'page page-home' },
+        _react2.default.createElement('div', { className: 'body-block bg-color-1' }),
+        _react2.default.createElement('div', { className: 'body-block-2' }),
+        _react2.default.createElement(_Logo2.default, { id: 'primaryLogo', uniqueClass: 'primary-logo' }),
+        _react2.default.createElement(
+          _reactRouterDom.NavLink,
+          { to: '/portfolio/ui-design', className: 'enter-button' },
+          'Go To Portfolio'
+        ),
+        _react2.default.createElement(
+          'div',
+          { id: 'contentArea', className: 'content-area' },
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { path: '/portfolio/:type', component: _Portfolio2.default })
+        )
       );
     }
   }]);
@@ -28863,7 +28879,9 @@ var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(38);
+var _SocialMediaLinks = __webpack_require__(304);
+
+var _SocialMediaLinks2 = _interopRequireDefault(_SocialMediaLinks);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28887,16 +28905,21 @@ var Home = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'page page-home' },
+        { className: 'under-contruction' },
         _react2.default.createElement(
-          'h1',
-          null,
-          'This is the Home Page'
-        ),
-        _react2.default.createElement(
-          _reactRouterDom.NavLink,
-          { to: '/portfolio/ui-design' },
-          'Go To Portfolio'
+          'div',
+          { className: 'site-width' },
+          _react2.default.createElement(
+            'h1',
+            null,
+            'Digital Designer &'
+          ),
+          _react2.default.createElement(
+            'h3',
+            null,
+            'Front End Developer'
+          ),
+          _react2.default.createElement(_SocialMediaLinks2.default, { id: 'holdingSocialLinks' })
         )
       );
     }
@@ -28943,7 +28966,7 @@ exports = module.exports = __webpack_require__(273)();
 
 
 // module
-exports.push([module.i, "/*\r\n * Anchors\r\n *\r\n * Most anchors will have these basic settings\r\n * there may be an instance when the text-decoration\r\n * is required within paragraphs\r\n *\r\n */\na,\n.link {\n  display: inline-block;\n  color: #d91f2d;\n  font-weight: 600;\n  text-decoration: none;\n  cursor: pointer; }\n  a:hover,\n  .link:hover {\n    text-decoration: underline; }\n\nul {\n  list-style: none; }\n  ul li {\n    margin: 0 0 5px 0; }\n\n.burger-menu {\n  position: relative;\n  width: 40px;\n  height: 35px;\n  cursor: pointer; }\n  .burger-menu > div {\n    position: absolute;\n    top: 10px;\n    left: 10px;\n    width: 20px;\n    height: 3px;\n    background: rgba(80, 80, 80, 0.5);\n    border-radius: 3px; }\n    .burger-menu > div:after {\n      position: absolute;\n      height: 3px;\n      display: block;\n      border-radius: 3px;\n      width: 0;\n      content: '';\n      transition: width 200ms, right 200ms; }\n    .burger-menu > div.burger-bar-1 {\n      transform: translateY(0); }\n      .burger-menu > div.burger-bar-1:after {\n        right: 0; }\n    .burger-menu > div.burger-bar-2 {\n      transform: translateY(6px); }\n    .burger-menu > div.burger-bar-3 {\n      transform: translateY(12px); }\n      .burger-menu > div.burger-bar-3:after {\n        right: 0; }\n  @media (hover: hover) {\n    .burger-menu:hover > div:after {\n      background: #cfd0d2;\n      width: 100%; } }\n  .burger-menu a.close {\n    background: #fc0; }\n    @media (hover: hover) {\n      .burger-menu a.close:hover {\n        background: #f00; } }\n  .burger-menu.active > div:after {\n    background: #cfd0d2;\n    width: 3px; }\n  @media (hover: hover) {\n    .burger-menu.active:hover > div:after {\n      width: 50%; } }\n\n.burger-menu.light.active > div:after, .burger-menu.light:hover > div:after {\n  background: #0b0b0b; }\n\n.social-media-links {\n  display: inline-block; }\n  .social-media-links::after {\n    clear: both;\n    content: \"\";\n    display: block; }\n  .social-media-links li {\n    float: left;\n    width: 40px;\n    height: 40px;\n    margin-right: 10px; }\n    .social-media-links li:last-child {\n      margin-right: 0; }\n    .social-media-links li .social-media-link {\n      fill: rgba(80, 80, 80, 0.5);\n      transition: fill 200ms, transform 200ms; }\n    .social-media-links li:hover .social-media-link {\n      fill: #3a3b3a;\n      transform: scale(1.3); }\n", ""]);
+exports.push([module.i, "@keyframes rotateLoop {\n  from {\n    transform: rotate(0deg); }\n  to {\n    transform: rotate(360deg); } }\n\n/*\r\n * Anchors\r\n *\r\n * Most anchors will have these basic settings\r\n * there may be an instance when the text-decoration\r\n * is required within paragraphs\r\n *\r\n */\na,\n.link {\n  display: inline-block;\n  color: #d91f2d;\n  font-weight: 600;\n  text-decoration: none;\n  cursor: pointer; }\n  a:hover,\n  .link:hover {\n    text-decoration: underline; }\n\n* {\n  box-sizing: border-box; }\n\nhtml,\nbody,\np,\nul,\nli,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  margin: 0;\n  padding: 0; }\n\nhtml,\nbody {\n  height: 100%;\n  width: 100%; }\n\nbody {\n  font-family: \"Source Sans Pro\", sans-serif;\n  font-weight: 200;\n  color: rgba(80, 80, 80, 0.5);\n  line-height: 1.4;\n  overflow: hidden; }\n\n.content-area {\n  position: relative;\n  z-index: 100; }\n  @media (min-width: 700px) {\n    .content-area {\n      height: 100%; } }\n\nh1,\nh2,\nh3,\nh4,\nh5 {\n  text-transform: uppercase; }\n\nh1 {\n  font-family: \"dosis\", sans-serif;\n  font-size: 50px;\n  font-weight: 800;\n  color: #3a3b3a;\n  line-height: 1.1;\n  padding-bottom: 10px;\n  text-transform: uppercase; }\n\nh2 {\n  font-family: \"dosis\", sans-serif;\n  font-size: 38px;\n  font-weight: 700;\n  color: #d91f2d;\n  line-height: 1.1;\n  padding-bottom: 18px;\n  text-transform: uppercase; }\n\nh3 {\n  font-family: \"dosis\", sans-serif;\n  font-size: 34px;\n  font-weight: 500;\n  color: #d91f2d;\n  line-height: 1.1;\n  padding-bottom: 14px;\n  text-transform: uppercase; }\n\nh4 {\n  font-family: \"dosis\", sans-serif;\n  font-size: 24px;\n  font-weight: 500;\n  color: #841619;\n  line-height: 1;\n  padding-bottom: 12px;\n  text-transform: uppercase; }\n\nh5 {\n  font-family: \"dosis\", sans-serif;\n  font-size: 18px;\n  font-weight: 500;\n  color: #841619;\n  line-height: 1;\n  padding-bottom: 40px;\n  text-transform: uppercase; }\n\nul {\n  list-style: none; }\n  ul li {\n    margin: 0 0 5px 0; }\n\n/*\r\n * site-width\r\n * Used for setting the width of the site when\r\n * on larger screens.  Also resizes responsively\r\n * with padding for smaller devices\r\n *\r\n */\n.site-width {\n  margin: 0 auto;\n  max-width: 1024px;\n  padding: 0 10px; }\n  @media screen and (min-width: 450px) {\n    .site-width {\n      padding: 0 20px; } }\n  @media screen and (min-width: 1024px) {\n    .site-width {\n      padding: 0; } }\n\n.root {\n  width: inherit;\n  height: inherit; }\n\n.bg-color-1 {\n  background-color: #0b0b0b; }\n\n.bg-color-2 {\n  background-color: #1b1c1c; }\n\n.bg-color-3 {\n  background-color: #3a3b3a; }\n\n.bg-color-4 {\n  background-color: #841619; }\n\n.bg-color-5 {\n  background-color: #d91f2d; }\n\n.bg-color-6 {\n  background-color: #cfd0d2; }\n\n.bg-color-7 {\n  background-color: #505050; }\n\n.bg-color-8 {\n  background-color: rgba(80, 80, 80, 0.5); }\n\n.bg-color-9 {\n  background-color: #fff; }\n\n.bg-color-10 {\n  background-color: #000; }\n\n.body-block {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 2;\n  width: 100%; }\n\n.body-block-2 {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1;\n  width: 100%;\n  background: #F9FAFB; }\n\n.burger-menu {\n  position: relative;\n  width: 40px;\n  height: 35px;\n  cursor: pointer; }\n  .burger-menu > div {\n    position: absolute;\n    top: 10px;\n    left: 10px;\n    width: 20px;\n    height: 3px;\n    background: rgba(80, 80, 80, 0.5);\n    border-radius: 3px; }\n    .burger-menu > div:after {\n      position: absolute;\n      height: 3px;\n      display: block;\n      border-radius: 3px;\n      width: 0;\n      content: '';\n      transition: width 200ms, right 200ms; }\n    .burger-menu > div.burger-bar-1 {\n      transform: translateY(0); }\n      .burger-menu > div.burger-bar-1:after {\n        right: 0; }\n    .burger-menu > div.burger-bar-2 {\n      transform: translateY(6px); }\n    .burger-menu > div.burger-bar-3 {\n      transform: translateY(12px); }\n      .burger-menu > div.burger-bar-3:after {\n        right: 0; }\n  @media (hover: hover) {\n    .burger-menu:hover > div:after {\n      background: #cfd0d2;\n      width: 100%; } }\n  .burger-menu a.close {\n    background: #fc0; }\n    @media (hover: hover) {\n      .burger-menu a.close:hover {\n        background: #f00; } }\n  .burger-menu.active > div:after {\n    background: #cfd0d2;\n    width: 3px; }\n  @media (hover: hover) {\n    .burger-menu.active:hover > div:after {\n      width: 50%; } }\n\n.burger-menu.light.active > div:after, .burger-menu.light:hover > div:after {\n  background: #0b0b0b; }\n\n.logo {\n  text-align: center; }\n  .logo .logo-icon {\n    margin: 0 auto;\n    width: 8em; }\n    .logo .logo-icon .pn-logo .blade {\n      transform-origin: 50% 50%;\n      animation: rotateLoop linear 900ms infinite; }\n  .logo p {\n    position: relative;\n    top: -0.625em; }\n  .logo span {\n    font-family: \"Fredoka One\", cursive;\n    font-weight: 400;\n    font-size: 1.6em; }\n  .logo .logotext-pocket {\n    color: #3a3b3a; }\n  .logo .logotext-ninja {\n    color: #d91f2d; }\n  .logo .logotext-design {\n    color: #cfd0d2; }\n\n.social-media-links {\n  display: inline-block; }\n  .social-media-links::after {\n    clear: both;\n    content: \"\";\n    display: block; }\n  .social-media-links li {\n    float: left;\n    width: 40px;\n    height: 40px;\n    margin-right: 10px; }\n    .social-media-links li:last-child {\n      margin-right: 0; }\n    .social-media-links li .social-media-link {\n      fill: rgba(80, 80, 80, 0.5);\n      transition: fill 200ms, transform 200ms; }\n    .social-media-links li:hover .social-media-link {\n      fill: #3a3b3a;\n      transform: scale(1.3); }\n\n.page-home {\n  text-align: center; }\n  .page-home .primary-logo {\n    position: absolute;\n    top: 25px;\n    left: 0;\n    width: 100%;\n    z-index: 10;\n    margin: 0 auto;\n    font-size: 45%;\n    transition: font-size 100ms; }\n    @media (min-height: 800px) {\n      .page-home .primary-logo {\n        font-size: 60%;\n        top: 40px; } }\n  .page-home .enter-button {\n    position: absolute;\n    top: 70%;\n    left: 50%;\n    z-index: 200;\n    transform: translate(-50%, -50%); }\n    @media (min-height: 500px) {\n      .page-home .enter-button {\n        top: 55%; } }\n    @media (min-height: 700px) {\n      .page-home .enter-button {\n        top: 50%; } }\n  .page-home .under-contruction {\n    position: relative;\n    z-index: 10;\n    text-align: center;\n    padding-top: 7.1em;\n    transition: padding-top 100ms; }\n    @media (min-height: 800px) {\n      .page-home .under-contruction {\n        padding-top: 9em; } }\n    .page-home .under-contruction .site-width {\n      max-width: 680px; }\n      @media (min-height: 800px) and (min-width: 400px) {\n        .page-home .under-contruction .site-width {\n          font-size: 140%; } }\n      .page-home .under-contruction .site-width h1 {\n        font-size: 1.5625em;\n        padding-bottom: 0.3em; }\n      .page-home .under-contruction .site-width h3 {\n        font-size: 1.125em;\n        padding-bottom: 0.625em; }\n\n.page {\n  width: inherit;\n  height: inherit; }\n", ""]);
 
 // exports
 
@@ -29319,8 +29342,6 @@ var Portfolio = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      // const { type } = this.props.match.params;
-
       return _react2.default.createElement(
         'div',
         null,
@@ -30460,6 +30481,100 @@ exports.default = function () {
       { id: "twitter" },
       _react2.default.createElement("path", { d: "M50,5C25.1,5,5,25.1,5,50c0,24.9,20.1,45,45,45s45-20.1,45-45C95,25.1,74.9,5,50,5z M69.8,39.9c0,0.4,0,0.9,0,1.3\r c0,13.2-10.1,28.5-28.5,28.5v0c-5.4,0-10.8-1.6-15.3-4.5c0.8,0.1,1.6,0.1,2.4,0.1c4.5,0,8.9-1.5,12.4-4.3c-4.3-0.1-8-2.9-9.4-7\r c1.5,0.3,3,0.2,4.5-0.2c-4.7-0.9-8-5-8-9.8c0,0,0-0.1,0-0.1c1.4,0.8,2.9,1.2,4.5,1.3c-4.4-2.9-5.8-8.8-3.1-13.4\r c5.1,6.3,12.6,10.1,20.6,10.5c-0.8-3.5,0.3-7.1,2.9-9.6c4-3.8,10.4-3.6,14.2,0.4c2.2-0.4,4.4-1.3,6.4-2.4c-0.7,2.3-2.3,4.3-4.4,5.5\r c2-0.2,3.9-0.8,5.7-1.6C73.5,36.7,71.8,38.5,69.8,39.9z" })
     )
+  );
+};
+
+/***/ }),
+/* 309 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _LogoSVG = __webpack_require__(310);
+
+var _LogoSVG2 = _interopRequireDefault(_LogoSVG);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (props) {
+  return _react2.default.createElement(
+    'div',
+    { id: props.id, className: 'logo ' + props.uniqueClass },
+    _react2.default.createElement(
+      'div',
+      { className: 'logo-icon' },
+      _react2.default.createElement(_LogoSVG2.default, null)
+    ),
+    _react2.default.createElement(
+      'p',
+      { className: 'logo-text' },
+      _react2.default.createElement(
+        'span',
+        { className: 'logotext-pocket' },
+        'Pocket'
+      ),
+      _react2.default.createElement(
+        'span',
+        { className: 'logotext-ninja' },
+        'ninja'
+      ),
+      _react2.default.createElement(
+        'span',
+        { className: 'logotext-design' },
+        '.design'
+      )
+    )
+  );
+};
+
+/***/ }),
+/* 310 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  return _react2.default.createElement(
+    "svg",
+    { className: "pn-logo", xmlns: "http://www.w3.org/2000/svg", width: "100%", height: "100%", viewBox: "0 0 300 300" },
+    _react2.default.createElement("path", { fill: "#1C1C1C", d: "M43.88 77.924c0-18.066 14.645-32.71 32.716-32.71H220.95c18.067 0 32.716 14.644 32.716 32.71V222.28c0 18.065-14.648 32.714-32.715 32.714H76.597c-18.07 0-32.715-14.648-32.715-32.715V77.923z" }),
+    _react2.default.createElement("path", { fill: "#3A3A3A", d: "M253.666 113.35v108.93c0 18.066-14.648 32.715-32.715 32.715H76.597c-18.07 0-32.715-14.648-32.715-32.715v-40.107l209.786-68.824z" }),
+    _react2.default.createElement(
+      "g",
+      { className: "blade" },
+      _react2.default.createElement("path", { fill: "#C9C9C9", d: "M217.475 149.232s12.734 38.33 76.63 62.822c0 0-44.765 34.814-104.257 5.918 0 0 28.867-11.006 14.805-33.223-10.938-17.267-72.246-11.554-54.81 33.505 0 0-38.32 12.744-62.817 76.64 0 0-34.82-44.774-5.918-104.267 0 0 11 28.877 33.218 14.805 17.27-10.938 11.553-72.236-33.51-54.8 0 0-12.735-38.33-76.637-62.822 0 0 44.77-34.818 104.27-5.922 0 0-28.876 11.006-14.813 33.223 10.942 17.272 72.246 11.56 54.805-33.505 0 0 38.33-12.74 62.822-76.636 0 0 34.814 44.765 5.918 104.262 0 0-10.996-28.872-33.213-14.805-17.277 10.938-11.564 72.237 33.505 54.805" }),
+      _react2.default.createElement("path", { d: "M149.843 218.256s-38.36 12.773-62.852 76.67l3.087-15.674s21.265-49.6 59.766-60.996z" }),
+      _react2.default.createElement("path", { fill: "#FFF", d: "M87.484 201.244s-15.576 39.297 2.593 78.008l-3.057 15.645S52.2 250.122 81.092 190.63c0 0 4.024 8.25 6.392 10.614z" }),
+      _react2.default.createElement("path", { d: "M217.475 149.232s12.764 38.36 76.67 62.852l-15.684-3.086s-49.6-21.27-60.985-59.766z" }),
+      _react2.default.createElement("path", { fill: "#FFF", d: "M200.463 211.586s39.287 15.576 77.998-2.588l15.646 3.057s-44.766 34.824-104.258 5.928c0 0 8.252-4.014 10.615-6.397z" }),
+      _react2.default.createElement("path", { d: "M148.44 81.605S186.8 68.832 211.294 4.93l-3.076 15.684s-21.27 49.6-59.776 60.99z" }),
+      _react2.default.createElement("path", { fill: "#FFF", d: "M210.805 98.617s15.576-39.297-2.588-78.003l3.057-15.645s34.814 44.765 5.918 104.262c0 0-4.014-8.252-6.387-10.615z" }),
+      _react2.default.createElement("path", { d: "M80.78 150.6S68.04 112.275 4.144 87.778l15.684 3.086s49.6 21.27 60.986 59.77l-.034-.034z" }),
+      _react2.default.createElement("path", { fill: "#FFF", d: "M97.83 88.27S58.535 72.7 19.83 90.865l-15.65-3.057s44.772-34.82 104.273-5.923c0 0-8.256 4.013-10.62 6.387z" })
+    ),
+    _react2.default.createElement("ellipse", { fill: "#831619", cx: "148.771", cy: "150.106", rx: "56.34", ry: "56.348" }),
+    _react2.default.createElement("path", { fill: "#D61F2C", d: "M110.282 150.106c0-21.255 17.23-38.486 38.486-38.486s38.48 17.23 38.48 38.486-17.226 38.48-38.48 38.48-38.486-17.225-38.486-38.48z" }),
+    _react2.default.createElement("path", { d: "M116.073 150.106c0-18.062 14.64-32.7 32.695-32.7 18.062 0 32.7 14.64 32.7 32.7s-14.64 32.7-32.7 32.7c-18.056 0-32.695-14.638-32.695-32.7z" })
   );
 };
 

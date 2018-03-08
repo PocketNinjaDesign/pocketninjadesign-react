@@ -20,8 +20,6 @@ class Portfolio extends Component {
   }
 
   render() {
-    // const { type } = this.props.match.params;
-
     return (
       <div>
         <h3><NavLink to="/">Home</NavLink></h3>

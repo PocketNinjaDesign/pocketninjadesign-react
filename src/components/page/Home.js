@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+
+import SocialMediaLinks from '../common/SocialMediaLinks';
 
 class Home extends Component {
   render() {
     return (
-      <div className="page page-home">
-        <h1>This is the Home Page</h1>
-        <NavLink to="/portfolio/ui-design">Go To Portfolio</NavLink>
+      <div className="under-contruction">
+        <div className="site-width">
+          <h1>Digital Designer &amp;</h1>
+          <h3>Front End Developer</h3>
+          <SocialMediaLinks id="holdingSocialLinks" />
+        </div>
       </div>
     );
   }
